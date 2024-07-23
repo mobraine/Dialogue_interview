@@ -13,13 +13,13 @@ data_global = pd.read_csv('data/data_training.csv')
 
 # model zero-shot forcast
 def get_model_forecast(days):
-    global data_global  # Declare data_global as global
+    global data_global # Declare data_global as global
     data_global['id'] = 'H1'
-    data_global = data_global.drop(columns='Unnamed: 0')
+    data_local = data_global.drop(columns='Unnamed: 0')
 
     # define the input to the time-series prediction model
     train_data = TimeSeriesDataFrame.from_data_frame(
-        data_global,
+        data_local,
         id_column="id",
         timestamp_column="slot_start_time"
     )
