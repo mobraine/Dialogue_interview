@@ -6,9 +6,10 @@ A FastAPI application for future demand inference using Transformer-based models
 
 1. Install dependencies:
 pip install autogluon.timeseries
+
 pip install fastapi
 
-2. Run the server:
+3. Run the server:
 hypercorn main:app --reload
 
 ## API Documentation
