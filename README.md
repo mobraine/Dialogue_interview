@@ -11,7 +11,8 @@ pip install autogluon.timeseries
 pip install fastapi
 
 2. Run the server:
-hypercorn main:app --reload
+
+uvicorn main:app --reload
 
 ## API Documentation
 
